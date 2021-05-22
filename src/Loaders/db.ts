@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 import config from "../config"; 
+import Friends from "../models/Friends";
 
 const connectDB = async () => {
   try {
@@ -10,6 +11,9 @@ const connectDB = async () => {
     });
 
     console.log("Mongoose Connected ...");
+    Friends.createCollection().then(function(collection){
+      console.log("Friends Collection is created!");
+    });
   } catch (err) {
     console.error(err.message);
     process.exit(1);

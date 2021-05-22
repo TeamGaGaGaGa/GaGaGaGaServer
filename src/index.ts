@@ -1,14 +1,14 @@
-import express from "express"; // [1]
-const app = express(); // [2]
+import express from "express"; 
+const app = express(); 
 import connectDB from "./Loaders/db";
 
 // Connect Database
 connectDB();
 
-app.use(express.json()); // [3]
+app.use(express.json()); 
 
 // Define Routes
-//app.use("/api/users", require("./api/users")); // [4]
+app.use("/friends", require("./api/friends")); 
 
 // error handler
 app.use(function (err, req, res, next) {
