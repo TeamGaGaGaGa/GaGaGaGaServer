@@ -84,6 +84,8 @@ export interface IFriendsList {
     tmi? : string;
 }
 ```
-## API 명세서
-- [API 명세서](https://github.com/TeamGaGaGaGa/GaGaGaGaServer/wiki)
+## API 명세서 초안
+- [API 명세서 초안](https://github.com/TeamGaGaGaGa/GaGaGaGaServer/wiki)
 
+## API 명세서 최종   
+- [API 명세서 최종](https://github.com/TeamGaGaGaGa/GaGaGaGaServer/wiki/%EC%B5%9C%EC%A2%85-API-%EB%AA%85%EC%84%B8%EC%84%9C)
