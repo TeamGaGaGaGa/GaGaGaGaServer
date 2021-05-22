@@ -12,6 +12,10 @@ const FriendsSchema = new mongoose.Schema({
                 type: String,
                 required: true,
             },
+            ybob: {
+                type: String,
+                required: true,
+            },
             mbti: {
                 type: String,
                 required: true,

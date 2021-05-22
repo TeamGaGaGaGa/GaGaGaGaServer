@@ -1,6 +1,7 @@
 export interface IFriendsList {
     name : string;
     part : string;
+    ybob : string;
     mbti : string;
     image : string;
     place : string;

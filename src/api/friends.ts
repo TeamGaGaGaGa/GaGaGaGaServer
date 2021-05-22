@@ -72,6 +72,7 @@ router.post("/", async(req, res) => {
     const {
         name, 
         part,
+        ybob,
         mbti,
         image,
         place,
@@ -85,6 +86,7 @@ router.post("/", async(req, res) => {
         const Profile= {
             name: name,
             part: part,
+            ybob: ybob,
             mbti: mbti,
             image: image,
             place: place,
