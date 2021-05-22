@@ -20,6 +20,10 @@ const FriendsSchema = new mongoose.Schema({
                 type: String,
                 required: true,
             },
+            ybob: {
+                type: String,
+                required: true,
+            },
             mbti: {
                 type: String,
                 required: true,
@@ -74,6 +78,7 @@ export interface IFriendsInputDTO {
 export interface IFriendsList {
     name : string;
     part : string;
+    ypob : string;
     mbti : string;
     image : string;
     place : string;
