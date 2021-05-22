@@ -42,11 +42,19 @@ import { IFriendsInputDTO } from "../interfaces/IFriends";
 
  router.get("/:id", async (req, res) => {
     try{
-        const profile = await Friends.findById(req.params.id);
-        if(!profile){
-            return res.status(400).json({ success: false, message : "친구 프로필 조회 실패"});
-        }
-        res.json(profile);
+        console.log(req.params.id);
+        const allprofiles = await Friends.find();
+        const profiles = await Friends.findById(allprofiles[0]._id);
+        profiles.friendsList.map(item => {
+            if(item["_id"] == req.params.id){
+                return res.json(item);
+            }
+        });
+        
+        // if(!profile){
+        //     return res.status(400).json({ success: false, message : "친구 프로필 조회 실패"});
+        // }
+        // res.json(profile);
     } catch (err) {
         if (err.kind == "ObjectId") {
             return res.status(400).json({success: false, message: "친구 프로필 조회 실패" });
@@ -87,8 +95,9 @@ router.post("/", async(req, res) => {
             friendsList : Profile
         };
 
-        //const profiles = await Friends.find();
-        const profile = await Friends.findById("60a93af1d13ad10435e4faaa");
+        const allprofiles = await Friends.find();
+        const profile = await Friends.findById(allprofiles[0]._id);
+        
         if(!profile){
             //create
             const profileData = new Friends(profiles);
