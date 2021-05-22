@@ -8,6 +8,7 @@ export interface IFriendsList {
     banmo: Boolean;
     answer1: string;
     answer2: string;
+    tmi? : string;
 }
 
 

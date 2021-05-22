@@ -39,6 +39,9 @@ const FriendsSchema = new mongoose.Schema({
             answer2: {
                 type: String,
                 required: true,
+            },
+            tmi : {
+                type: String,
             }
         }
     ]

@@ -1,6 +1,7 @@
  import express from "express";
 import Friends from "../models/Friends";
 import { IFriendsInputDTO } from "../interfaces/IFriends";
+import { time } from "console";
  const router = express.Router();
  
  /**
@@ -78,6 +79,7 @@ router.post("/", async(req, res) => {
         banmo,
         answer1,
         answer2,
+        tmi
     }= req.body;
     try{
         const Profile= {
@@ -89,26 +91,27 @@ router.post("/", async(req, res) => {
             face: face,
             banmo: banmo,
             answer1: answer1,
-            answer2: answer2
+            answer2: answer2,
+            tmi: tmi
         };
         let profiles : IFriendsInputDTO = {
             friendsList : Profile
         };
 
         const allprofiles = await Friends.find();
-        const profile = await Friends.findById(allprofiles[0]._id);
-        
-        if(!profile){
+        if(!allprofiles.length){
             //create
             const profileData = new Friends(profiles);
             await profileData.save();
             return res.status(200).json({ success: true, message : "프로필 저장 성공"});
         }
+        const profile = await Friends.findById(allprofiles[0]._id);
         profile.friendsList.unshift(Profile);
         await profile.save();
-
         res.status(200).json({ success: true, message : "프로필 저장 성공"});
+        
     }catch(err) {
+        console.log(err);
         res.status(500).send("프로필 저장 실패");
     }
 });
