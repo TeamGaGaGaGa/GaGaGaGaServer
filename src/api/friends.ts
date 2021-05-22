@@ -12,13 +12,12 @@ import { time } from "console";
 
  router.get("/", async(req, res) => {
     try{
-        const list = await Friends.find();
-        if(list)  {
+        const allprofiles = await Friends.find();
+        if(allprofiles)  {
+            const list = await Friends.findById(allprofiles[0]._id);
             const response = {
                 "success" : true,
-                "data" : {
-                    "FreindsList": [list]
-                }
+                list
             };
             res.json(response);
         }
