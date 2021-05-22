@@ -85,5 +85,5 @@ export interface IFriendsList {
 }
 ```
 ## API 명세서
-- [API 명세서](http://wikidocs.net)
+- [API 명세서](https://github.com/TeamGaGaGaGa/GaGaGaGaServer/wiki)
 
