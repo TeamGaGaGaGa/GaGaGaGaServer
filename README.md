@@ -1,7 +1,11 @@
-# GaGaGaGaServer
-## 서비스 소개  
-서비스 이름 : 갸가갸가  
-서비스 한 줄 소개 : 솝트다운 질문으로 만드는 첫인상 기록 서비스
+# 서비스 소개  
+### 서비스 이름 : 갸가갸가  
+### 서비스 한 줄 소개 : 솝트다운 질문으로 만드는 첫인상 기록 서비스   
+![image](https://user-images.githubusercontent.com/20807197/119241523-fe896000-bb91-11eb-9317-283485be6c47.png)
+<img width="360" alt="Android - 70" src="https://user-images.githubusercontent.com/20807197/119241479-95095180-bb91-11eb-80e1-c10796d5d9d6.png"> <img width="360" alt="Android - 76" src="https://user-images.githubusercontent.com/20807197/119241497-b407e380-bb91-11eb-98ca-e34ad68946ce.png">
+
+
+
   
 ## Models. 
 - /models/Friends.ts
