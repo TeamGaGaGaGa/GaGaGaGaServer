@@ -1,7 +1,7 @@
 # GaGaGaGaServer
 ## 서비스 소개  
 서비스 이름 : 갸가갸가  
-서비스 한 줄 소개 : 당신이  
+서비스 한 줄 소개 : 솝트다운 질문으로 만드는 첫인상 기록 서비스
   
 ## Models. 
 - /models/Friends.ts
@@ -47,6 +47,9 @@ const FriendsSchema = new mongoose.Schema({
             answer2: {
                 type: String,
                 required: true,
+            },
+            tmi: {
+              type: String
             }
         }
     ]
@@ -78,6 +81,7 @@ export interface IFriendsList {
     banmo: Boolean;
     answer1: string;
     answer2: string;
+    tmi? : string;
 }
 ```
 ## API 명세서
